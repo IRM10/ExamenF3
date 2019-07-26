@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Agregar </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+      <ion-content>
+        <div  style="margin: 7%">
+            <form #formularioRegistro="ngForm" (ngSubmit)="onSubmit(formularioRegistro)" style="margin-left: 17%; margin-right:17%">
+                <ion-item > 
+                    <ion-label position="stacked">Nombre Contacto<ion-text color="danger">*</ion-text></ion-label>
+                    <ion-input required type="text" [(ngModel)]="person.name" [ngModelOptions]="{standalone: true}"></ion-input>
+                  </ion-item><br><br>
+  
+        <ion-item > 
+          <ion-label position="stacked"> Celular<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="number" [(ngModel)]="person.phone" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item><br><br>
+            <ion-button  type="submit" >Registrar</ion-button>
+</form>
+      </div>
+      
+
+</ion-content>

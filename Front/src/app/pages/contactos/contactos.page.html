@@ -1,0 +1,40 @@
+<ion-header>
+
+
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content>
+       
+
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Celular</th>
+
+
+  
+          </tr>
+        </thead>
+        <tbody>
+         
+                <tr *ngFor=" let i of todasLasPersonas" >
+                        <td>{{i.primer_nombre}}  </td>
+                        <td >{{i.telefonos.celular}}</td>
+
+                      </tr>
+        </tbody>
+        <div style="margin-left: 10%">
+          <ion-button  type="button" href="/menu/agregar" >Agregar Contacto</ion-button>
+          </div>
+      </table> 
+
+</ion-content>
